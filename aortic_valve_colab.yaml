@@ -1,0 +1,23 @@
+train: [
+  "./datasets/train/images",
+  # "./datasets/aug_mosaic/images",
+  # "./datasets/aug_hsv/images",
+  # "./datasets/aug_scale/images"
+]
+val: "./datasets/val/images"
+test: "./datasets/test/images"
+      #  "./yolov12/datasets/test/images2"]
+
+names:
+  0: aortic_valve
+
+# train:
+#   "D:/yolo_dataset/images/train"
+  
+# val: "D:/yolo_dataset/images/val"
+# test: "D:/yolo_dataset/images/test"
+#       #  "./yolov12/datasets/test/images2"]
+
+# nc: 1
+# names:
+#   0: tumor

@@ -1,0 +1,30 @@
+# Datasets
+/datasets/
+/training_image/
+/training_label/
+/yolov12/lung_dataset/
+/yolov12/unlabled_datasets/
+*.jpg
+*.jpeg
+*.png
+*.dcm
+*.zip
+
+# Test scripts (not needed in repo)
+/models/
+
+# Training outputs / weights
+runs/
+*.pt
+*.onnx
+*.engine
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
