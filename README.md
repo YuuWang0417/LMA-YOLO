@@ -166,9 +166,9 @@ LMA-YOLO is compared against the following state-of-the-art lightweight detector
 - [RCS-YOLO](https://github.com/mkang315/RCS-YOLO)
 - [PK-YOLO](https://github.com/mkang315/PK-YOLO)
 
-## License
+<!-- ## License
 
-This project builds on [Ultralytics YOLOv12](https://github.com/sunsmarterjie/yolov12) and follows its **AGPL-3.0** license.
+This project builds on [Ultralytics YOLOv12](https://github.com/sunsmarterjie/yolov12) and follows its **AGPL-3.0** license. -->
 
 ## Acknowledgements
 
