@@ -14,7 +14,6 @@ This repository contains the training / evaluation code and model configuration 
 ```
 .
 ├── aortic_valve_colab.yaml       # Dataset configuration
-├── LICENSE
 ├── README.md
 ├── .gitignore
 └── yolov12/
@@ -89,11 +88,7 @@ The dataset configuration is expected at `../aortic_valve_colab.yaml` (relative 
 
 ```yaml
 train: [
-  "./datasets/train/images",
-  # "./datasets/aug_mosaic/images",
-  # "./datasets/aug_hsv/images",
-  # "./datasets/aug_scale/images"
-]
+  "./datasets/train/images",]
 val: "./datasets/val/images"
 test: "./datasets/test/images"
 
