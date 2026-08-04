@@ -13,40 +13,57 @@ This repository contains the training / evaluation code and model configuration 
 
 ```
 .
-├── aortic_valve_colab.yaml       # Dataset configuration
+├── aortic_valve_colab.yaml
+├── environment.yml
 ├── README.md
 ├── .gitignore
+├── datasets/
+│   ├── train/
+│   ├── val/
+│   └── test/
 └── yolov12/
-    ├── train.py                   # Training entry point
-    ├── requirements.txt           # Python dependencies
-    └── yolov12_LMA-YOLO.yaml      # LMA-YOLO model configuration (all scales)
+    ├── train.py
+    ├── requirements.txt
+    └── yolov12_LMA-YOLO.yaml
 ```
 
 ## Hardware
 
 Training/evaluation was performed on:
-- NVIDIA GeForce RTX 4070 (12GB)
-- NVIDIA GeForce RTX 3060 Ti (8GB)
+- Windows 11
+- NVIDIA GeForce RTX 4070 (12 GB)
+- NVIDIA GeForce RTX 3060 Ti (8 GB)
 
 ## Environment Setup
 
-Tested on Windows with an Anaconda environment (Python 3.10, CUDA 12.8).
+The project was developed and tested on **Windows**, using **Anaconda**, **Python 3.10**, and **PyTorch 2.11.0 (CUDA 12.8 build)**.
+
+### Option 1 (Recommended): Recreate the Conda Environment
+
+```bash
+conda env create -f environment.yml
+conda activate yolov12
+```
+
+### Option 2: Install Dependencies Manually
 
 ```bash
 conda create -n yolov12 python=3.10 -y
 conda activate yolov12
 
-pip install torch==2.11.0+cu128 torchvision==0.26.0+cu128 torchaudio==2.11.0+cu128 \
-    --index-url https://download.pytorch.org/whl/cu128
+pip install torch==2.11.0+cu128 torchvision==0.26.0+cu128 torchaudio==2.11.0+cu128 --index-url https://download.pytorch.org/whl/cu128
 
 pip install -r requirements.txt
 ```
 
-Verify the GPU is detected:
+### Verify Installation
 
 ```bash
 python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
 ```
+
+The complete Conda environment is provided in `environment.yml`. The
+`requirements.txt` file contains the Python package dependencies only.
 
 ### Dependencies
 
@@ -80,7 +97,7 @@ python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
 | typing_extensions | 4.15.0 |
 | nvidia-ml-py | 13.610.43 |
 
-See `requirements.txt` for the full pinned list.
+For the complete Conda environment (including non-Python packages), see `environment.yml`. For Python packages only, see `requirements.txt`.
 
 ## Dataset
 
